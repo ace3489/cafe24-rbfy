@@ -1,0 +1,522 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/_inc/css/pd_list.css)-->
+
+<!--@css(/event/event_common.css)-->
+<!--@css(/event/260409/260409.css)-->
+<!--@css(/event/event_timer_2.css)-->
+
+<!--@js(/event/imageMapResizer.min.js)-->
+<!--@js(/event/event_common.js)-->
+<!--@js(/event/260409/260409.js)-->
+
+<!-- 하단 타이머 적용(이벤트 마감까지) -->
+<!--@css(/event/event_timer_follow_2.css)-->
+<!--@js(/event/event_timer_follow_2.js)-->
+
+<!-- v3 : CRM 발송시 특별사은품 영역으로 이동될 수 있는 링크 필요 -->
+
+
+<!-- snap review end -->
+
+<div class="pdlist_content">
+    <div class="eventWrap">
+        <div class="bubble_area_follow">
+            <div class="bubble">
+                <span class="txt">이벤트 마감까지</span>
+                <div class="time_deal_follow" id="timerDealFollow">
+                    <div class="timer">
+                        <div class="timer_box time_box">
+                            <div class="timer_txt" id="timerDay">
+                                <div class="timer_item">00</div>
+                                <div class="time_unit">일</div>
+                            </div>
+
+                            <div class="timer_txt" id="timerHour">
+                                <div class="timer_item">00</div>
+                                <div class="time_unit">시</div>
+                            </div>
+
+                            <div class="timer_txt" id="timerMin">
+                                <div class="timer_item">00</div>
+                                <div class="time_unit">분</div>
+                            </div>
+
+                            <div class="timer_txt" id="timerSec">
+                                <div class="timer_item">
+                                    <span class="sec_1">0</span><span class="sec_2">0</span>
+                                    <span class="dot">.</span>
+                                    <span class="ms_1">0</span><span class="ms_2">0</span>
+                                </div>
+                            </div>
+                            <!-- <div class="time_unit">초</div> -->
+                        </div>
+                    </div>
+                </div>
+                <span class="end_txt">남음</span>
+            </div>
+        </div>
+
+
+        <!-- 이벤트 KV -->
+        <div class="kv">
+            <img src="/custom/img/event/260409/1_1.png" alt="" class="bg">
+            <img src="/custom/img/event/260409/1_2.png" alt="" class="assets">
+
+            <img src="/custom/img/event/260409/flower.png" alt="" class="flower">
+            <img src="/custom/img/event/260409/flower.png" alt="" class="flower">
+            <img src="/custom/img/event/260409/flower.png" alt="" class="flower">
+            <img src="/custom/img/event/260409/flower.png" alt="" class="flower">
+        </div>
+
+        <!-- 메뉴바 -->
+        <div class="tab">
+            <img src="/custom/img/event/260409/menu_bar01.png" alt="" usemap="#tab">
+            <img src="/custom/img/event/260409/menu_bar02.png" alt="" usemap="#tab">
+            <img src="/custom/img/event/260409/menu_bar03.png" alt="" usemap="#tab">
+            <img src="/custom/img/event/260409/menu_bar04.png" alt="" usemap="#tab">
+
+            <map id="tab" name="tab">
+                <area shape="rect" alt="" title="" coords="0,0,225,139" href="#sec01" data-target="sec01" />
+                <area shape="rect" alt="" title="" coords="226,0,450,139" href="#sec02" data-target="sec02" />
+                <area shape="rect" alt="" title="" coords="451,0,676,139" href="#sec03" data-target="sec03" />
+                <area shape="rect" alt="" title="" coords="677,0,900,139" href="#sec04" data-target="sec04" />
+            </map>
+        </div>
+        <a href="https://view.shoppinglive.naver.com/lives/1868818" target="_blank" class="live"><img
+                src="/custom/img/event/260409/live.png" alt=""></a>
+        <a href="/persona"><img src="/custom/img/event/260409/persona.png" alt=""></a>
+
+        <div id="contentWrap">
+            <!-- 이벤트 섹션01 -->
+            <div id="sec01" class="e_content">
+                <div class="coupon_wrap">
+                    <img src="/custom/img/event/260409/v2/2.png" alt="" usemap="#imgmap2026312142540">
+                    <map id="imgmap2026312142540" name="imgmap2026312142540">
+                        <area shape="rect" alt="" title="" coords="144,1719,757,1991"
+                            href="https://pf.kakao.com/_xlviuu/coupons?filter=usable" target="_blank" />
+                        <area shape="rect" alt="" title="" coords="328,2052,573,2118" href="javascript:void(0)"
+                            class="jsBtnOpenPopup" data-popup="popupCoupon" />
+                    </map>
+                    <div class="coupon_area">
+                        <div class="progress">
+                            <div class="box">
+                                3% 쿠폰
+                                <div class="bar">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="box">
+                                5% 쿠폰
+                                <div class="bar">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="box">
+                                10% 쿠폰
+                                <div class="bar">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="box">
+                                3,000 쿠폰
+                                <div class="bar">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="box">
+                                5,000 쿠폰
+                                <div class="bar">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="random">
+                            <div class="scratch-container">
+                                <!-- 
+                                    data-popup 종류
+
+                                    - 평소 : 없음
+                                    - 1일 발급 제한 : popupLimits
+                                    - 쿠폰 수량 마감 : popupSoldout
+                                    - 이벤트 기간 전 : popupBefore
+                                    - 이벤트 마감 : popupAfter
+                                -->
+                                <span class="defend jsBtnOpenPopup" data-popup=""></span>
+                                <div class="result">
+                                    <img src="/custom/img/event/260409/coupon01.jpg" alt="" class="coupon">
+                                </div>
+                                <canvas id="scratchCanvas"></canvas>
+                            </div>
+
+                            <div class="txt before"></div>
+                            <div class="txt after">축하드립니다</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="/custom/img/event/260409/v2/3.png" alt="" usemap="#imgmap2026439196">
+                <map id="imgmap2026439196" name="imgmap2026439196">
+                    <area shape="rect" alt="" title="" coords="311,2541,591,2617" href="javascript:void(0)"
+                        class="jsBtnOpenPopup" data-popup="popupCoupon" />
+                </map>
+            </div>
+
+            <!-- 이벤트 섹션02 -->
+            <div id="sec02" class="e_content">
+                <div class="sec02_1">
+                    <img src="/custom/img/event/260409/v2/4.png" alt="" usemap="#imgmap202642114939">
+                    <map id="imgmap202642114939" name="imgmap202642114939">
+                        <area shape="rect" alt="" title="" coords="39,481,449,1182"
+                            href="/product/detail.html?product_no=1567" target="" />
+                        <area shape="rect" alt="" title="" coords="460,485,867,1183"
+                            href="/product/detail.html?product_no=1568" target="" />
+                        <area shape="rect" alt="" title="" coords="222,1255,677,1351" href="javascript:void(0)"
+                            class="scrollTo04" data-tab-no="344" />
+                        <area shape="rect" alt="" title="" coords="33,1625,867,2152"
+                            href="/product/detail.html?product_no=1569" target="" />
+                        <area shape="rect" alt="" title="" coords="35,2194,871,2748"
+                            href="/product/detail.html?product_no=1570" target="" />
+                        <area shape="rect" alt="" title="" coords="37,2774,871,3336"
+                            href="/product/detail.html?product_no=1571" target="" />
+                        <area shape="rect" alt="" title="" coords="220,3417,677,3517" href="javascript:void(0)"
+                            class="scrollTo04" data-tab-no="345" />
+                    </map>
+                    <div id="sec02_2" class="blank"></div>
+                </div>
+                <div id="sec02_3" class="blank"></div>
+                <div class="limit_price">
+                    <img src="/custom/img/event/260409/v2/5_1.png" class="5_1 on" alt="" usemap="#sec5_1">
+                    <map id="sec5_1" name="sec5_1">
+                        <area shape="rect" alt="" title="" coords="314,312,555,392" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_2" />
+                        <area shape="rect" alt="" title="" coords="590,311,868,392" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_3" />
+                        <area shape="rect" alt="" title="" coords="36,876,443,1622"
+                            href="/product/detail.html?product_no=1577" target="" />
+                        <area shape="rect" alt="" title="" coords="462,876,869,1620"
+                            href="/product/detail.html?product_no=1578" target="" />
+                        <area shape="rect" alt="" title="" coords="35,1637,443,2384"
+                            href="/product/detail.html?product_no=1572" target="" />
+                        <area shape="rect" alt="" title="" coords="463,1637,869,2383"
+                            href="/product/detail.html?product_no=1573" target="" />
+                        <area shape="rect" alt="" title="" coords="37,2401,443,3147"
+                            href="/product/detail.html?product_no=1574" target="" />
+                        <area shape="rect" alt="" title="" coords="464,2403,869,3149"
+                            href="/product/detail.html?product_no=1576" target="" />
+                        <area shape="rect" alt="" title="" coords="225,3221,677,3318" href="javascript:void(0)"
+                            class="scrollTo04" data-tab-no="361" />
+                    </map>
+
+                    <img src="/custom/img/event/260409/v2/5_2.png" class="5_2" alt="" usemap="#sec5_2">
+                    <map id="sec5_2" name="sec5_2">
+                        <area shape="rect" alt="" title="" coords="38,316,279,395" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_1" />
+                        <area shape="rect" alt="" title="" coords="589,311,870,392" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_3" />
+                        <area shape="rect" alt="" title="" coords="36,878,444,1622"
+                            href="/product/detail.html?product_no=1579" target="" />
+                        <area shape="rect" alt="" title="" coords="463,877,869,1623"
+                            href="/product/detail.html?product_no=1581" target="" />
+                        <area shape="rect" alt="" title="" coords="36,1639,444,2335"
+                            href="/product/detail.html?product_no=1579" target="" />
+                        <area shape="rect" alt="" title="" coords="463,1637,869,2337"
+                            href="/product/detail.html?product_no=1580" target="" />
+                        <area shape="rect" alt="" title="" coords="225,2404,677,2501" href="javascript:void(0)"
+                            class="scrollTo04" data-tab-no="362" />
+                    </map>
+
+                    <img src="/custom/img/event/260409/v2/5_3.png" class="5_3" alt="" usemap="#sec5_3">
+                    <map id="sec5_3" name="sec5_3">
+                        <area shape="rect" alt="" title="" coords="39,314,281,395" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_1" />
+                        <area shape="rect" alt="" title="" coords="313,313,557,392" href="javascript:void(0)"
+                            class="sec02_tab" data-is-on="5_2" />
+                        <area shape="rect" alt="" title="" coords="37,876,444,1621"
+                            href="/product/detail.html?product_no=1582" target="" />
+                        <area shape="rect" alt="" title="" coords="463,876,871,1622"
+                            href="/product/detail.html?product_no=1591" target="" />
+                        <area shape="rect" alt="" title="" coords="223,1696,677,1793" href="javascript:void(0)"
+                            class="scrollTo04" data-tab-no="346" />
+                    </map>
+                </div>
+            </div>
+
+            <!-- 이벤트 섹션03 -->
+            <div id="sec03" class="e_content">
+                <img src="/custom/img/event/260409/v2/6.png" alt="" usemap="#imgmap202643165332">
+                <map id="imgmap202643165332" name="imgmap202643165332">
+                    <area shape="rect" alt="" title="" coords="270,1985,634,2082"
+                        href="/product/detail.html?product_no=1562" target="" />
+                </map>
+
+                <div class="swiper time_line">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide on">
+                            4.10 OPEN
+                        </div>
+                        <div class="swiper-slide">
+                            4.11 OPEN
+                        </div>
+                        <div class="swiper-slide">
+                            4.12 OPEN
+                        </div>
+                        <div class="swiper-slide">
+                            4.13 OPEN
+                        </div>
+                        <div class="swiper-slide">
+                            4.14 OPEN
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deal_wrap">
+                    <div module="product_listmain_55" class="displaynone">
+                        <!--
+                            $count = 5
+                        -->
+                        <div class="{$product_no}" id="anchorBoxId_{$product_no}">
+                            <img src="{$image_tiny}" id="{$image_tiny_id}" class="thumb" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper time_deal">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-prd-no="1562">
+                                <img src="/custom/img/event/260409/6_1.png" alt="">
+                            </div>
+                            <div class="swiper-slide" data-prd-no="1563">
+                                <img src="/custom/img/event/260409/6_2.png" alt="">
+                            </div>
+                            <div class="swiper-slide" data-prd-no="1564">
+                                <img src="/custom/img/event/260409/6_3.png" alt="">
+                            </div>
+                            <div class="swiper-slide" data-prd-no="1565">
+                                <img src="/custom/img/event/260409/6_4.png" alt="">
+                            </div>
+                            <div class="swiper-slide" data-prd-no="1566">
+                                <img src="/custom/img/event/260409/6_5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="/custom/img/event/260409/prev.png" alt="">
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="/custom/img/event/260409/next.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이벤트 섹션03 -->
+            <div id="sec04" class="e_content">
+                <img src="/custom/img/event/260409/7.png" alt="">
+                <!-- 할인 제품 카테고리 -->
+                <div class="pdlist_tab swiper" id="pdlistTab">
+                    <!--
+                                    카테고리 추가시 상품 카테고리 URL 의 cate_no 의 값을 확인하여 data-cate-no 에 입력해주세요
+                                -->
+                    <div class="swiper-wrapper">
+                        <button type="button" data-article="all" class="swiper-slide tab_item on"
+                            data-cate-no="343">전제품</button>
+                        <button type="button" data-article="cate344" class="swiper-slide tab_item" data-cate-no="344">
+                            첫 구매 특가
+                        </button>
+                        <button type="button" data-article="cate345" class="swiper-slide tab_item" data-cate-no="345">
+                            단독 세트 특가
+                        </button>
+                        <button type="button" data-article="cate361" class="swiper-slide tab_item" data-cate-no="361">
+                            컨트롤장벽라인
+                        </button>
+                        <button type="button" data-article="cate361" class="swiper-slide tab_item" data-cate-no="362">
+                            7초진정라인
+                        </button>
+                        <button type="button" data-article="cate361" class="swiper-slide tab_item" data-cate-no="346">
+                            코어탄력라인
+                        </button>
+                        <button type="button" data-article="cate361" class="swiper-slide tab_item" data-cate-no="347">
+                            단품 특가
+                        </button>
+                    </div>
+                </div>
+                <div class="pdlist">
+
+                    <!-- 할인 제품 리스트 -->
+                    <div class="pdlist_panel" id="pdlistPanel">
+                        <!--@js(/js/module/product/listnormal.js)-->
+                        <!-- 전제품 -->
+                        <div class="panel on" data-cate-no="343">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 343
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 첫 구매 특가 -->
+                        <div class="panel" data-cate-no="344">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 344
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 단독 세트 특가 -->
+                        <div class="panel" data-cate-no="345">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 345
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 컨트롤 라인 -->
+                        <div class="panel" data-cate-no="361">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 361
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 7초 라인 -->
+                        <div class="panel" data-cate-no="362">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 362
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 코어 라인 -->
+                        <div class="panel" data-cate-no="346">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 346
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+
+                        <!-- 단품 특가 -->
+                        <div class="panel" data-cate-no="347">
+                            <ul class="prdList" module="product_listnormal">
+                                <!--
+                                    $cate_no = 347
+                                    $count = 200
+                                    $basket_result = /product/add_basket.html
+                                    $basket_option = /product/basket_option.html
+                                -->
+                                <!--@import(/event/event_prd.html)-->
+                                <!--@import(/event/event_prd.html)-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="notice_title off" src="/custom/img/event/260409/notice_on.png" alt="">
+            <img class="notice_title " src="/custom/img/event/260409/notice_off.png" alt="">
+            <img class="prd_notice" src="/custom/img/event/260409/notice.png" alt="">
+
+
+            <!-- 260409 14시 -->
+            <img src="/custom/img/event/260409/8_2.png" alt="">
+            <!-- <img src="/custom/img/event/260409/8.png" alt="" usemap="#imgmap20264318822">
+            <map id="imgmap20264318822" name="imgmap20264318822">
+                <area shape="rect" alt="" title="" coords="252,1659,643,1753" href="/event/thanks_pop.html" target="" />
+            </map> -->
+        </div>
+    </div>
+
+
+
+
+    <!-- 팝업 -->
+    <div class="popup" id="popupCoupon">
+        <button class="jsBtnClosePopup" data-popup="popupCoupon">
+            <span class="blind">닫기</span>
+        </button>
+        <div class="popup_inr">
+            <strong>쿠폰 유의 사항</strong>
+            <div class="popup_content">
+                <ul>
+                    <li>
+                        <span>카카오 채널 추가 3,000원 쿠폰과 추가 할인 랜덤 쿠폰은 이벤트 시 중복 사용 가능</span>
+                        합니다.
+                    </li>
+                    <li>
+                        추가 할인 랜덤 쿠폰은 3만원 이상 구매 시 사용 가능합니다.
+                    </li>
+                    <li>
+                        3%, 5%, 10% 할인쿠폰은 최대 1만원 할인됩니다.
+                    </li>
+                    <li>
+                        추가 할인 랜덤 쿠폰은 발급일 당일, 이벤트 상품에만 사용 가능합니다.
+                    </li>
+                    <li>
+                        카카오 채널추가 쿠폰은 발급일로부터 14일 이내 사용 가능하며,<br />
+                        유효기간 이후에는 소멸 됩니다.
+                    </li>
+                    <li>구매 후 취소 시 쿠폰이 복원되며, 반품/교환은 상황에 따라 달라집니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup fullimg" id="popupBefore">
+        <button class="jsBtnClosePopup" data-popup="popupBefore"
+            style="position: static; width: 100%; height: auto; border-radius: 0;">
+            <img src="/custom/img/event/260409/popupbefore.png" alt="">
+        </button>
+    </div>
+
+    <div class="popup fullimg" id="popupLimits">
+        <button class="jsBtnClosePopup" data-popup="popupLimits"
+            style="position: static; width: 100%; height: auto; border-radius: 0;">
+            <img src="/custom/img/event/260409/popuplimits.png" alt="">
+        </button>
+    </div>
+
+    <div class="popup fullimg" id="popupSoldout">
+        <button class="jsBtnClosePopup" data-popup="popupSoldout"
+            style="position: static; width: 100%; height: auto; border-radius: 0;">
+            <img src="/custom/img/event/260409/popupsoldout.png" alt="">
+        </button>
+    </div>
+
+    <div class="popup fullimg" id="popupAfter">
+        <button class="jsBtnClosePopup" data-popup="popupAfter"
+            style="position: static; width: 100%; height: auto; border-radius: 0;">
+            <img src="/custom/img/event/260409/popupafter.png" alt="">
+        </button>
+    </div>
+
+    <div class="popup_bg"></div>

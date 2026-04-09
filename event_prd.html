@@ -1,0 +1,33 @@
+<li class="jsProducItem">
+    <div class="thumbnail">
+        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+            <div class="thumb_df thumb_item" style="background-image: url('{$image_tiny}')">
+            </div>
+            <div class="thumb_hv thumb_item" style="background-image: url('{$image_medium}')"></div>
+        </a>
+    </div>
+    <div class="description" ec-data-custom="{$product_custom}" ec-data-price="{$product_price}">
+        <span class="chk"><input type="checkbox"
+                class="{$product_compare_class} {$product_compare_display|display}" /></span>
+        <p class="name {$product_name_display|display} {$product_name_display|display}">
+            <a href="/product/detail.html{$param}">{$product_name|striptag}
+                <span class="custom_capacity">{$custom_option16}</span></a>
+        </p>
+        <!-- <p class="summary">{$summary_desc}</p>                                     -->
+        <p class="summary displaynone">{$summary_desc|striptag}</p>
+        <div class="badges"></div>
+        <!-- 알파리뷰 롤링위젯-->
+        <div class="alpha_widget" data-code="ce14445b" data-value="{$product_no}"></div>
+        <!-- /알파리뷰 -->
+        <div class="price_wr">
+            <p class="off"></p>
+            <p class="price" ec-data-custom="{$product_custom}" ec-data-price="{$product_price}">
+                {$product_price|numberformat}
+            </p>
+            <p class="consumer {$product_custom|display}">{$product_custom|numberformat}
+            </p>
+        </div>
+        <div class="ico_soldout {$soldout_icon|display}">{$soldout_icon}</div>
+        <div class="cart_wr">{$basket_icon}</div>
+    </div>
+</li>
